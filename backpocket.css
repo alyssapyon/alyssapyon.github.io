@@ -41,6 +41,7 @@ header{
     text-transform: uppercase;
     letter-spacing: 4px;
     text-align: center;
+    font-size: 1em;
     
     position: absolute;
     display:block;
@@ -53,6 +54,7 @@ header{
     position: relative;
     top: 35%;
     line-height: 2.5em;
+    font-size: 1em;
 }
 
 .front-page .text1{
