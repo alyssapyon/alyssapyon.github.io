@@ -1,0 +1,177 @@
+:root{
+    --blue: #9ABDDC;
+    --yellow: #F9F7A1;
+    --darkyellow: #F9E8A1;
+    --white: #fff;
+    --dark: #262626;
+    --font: sans-serif;
+    
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    text-transform: uppercase;
+}
+
+
+.clr{
+    clear: both;
+    height: 10px;
+    background: grey;
+    display: block;
+}
+
+
+
+/* header/front-page */
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--blue);
+    
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    
+    position: absolute;
+    display:block;
+}
+
+.front-page{
+    width: 850px;
+    margin: auto;
+    
+    position: relative;
+    top: 35%;
+    line-height: 2.5em;
+}
+
+.front-page .text1{
+    color: var(--white);
+    text-align: left;
+}
+
+
+.front-page .text2{
+    color: var(--yellow);
+    text-align: right;
+}
+
+.front-page .fas{
+    color: var(--white);
+    font-size: 30px;
+    
+    margin-top: 80px;
+}
+
+
+/* section */
+section{
+    position: absolute;
+    top: 100vh;
+    
+    
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+    transition: background 500ms;
+    
+    text-align: center;
+}
+
+.lyrics{
+    padding-top: 25vh;
+    margin: auto;
+    min-width: 100px;
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+    
+}
+
+.lyrics h1:nth-child(odd){
+    color: var(--darkyellow);
+    text-align: left;
+}
+
+.lyrics h1:nth-child(even){
+    color: var(--blue);
+    text-align: left;
+}
+
+/* toggle button */
+.toggle{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 45px;
+    right: 100px;
+}
+
+.toggle .fas{
+    padding: 2px;
+}
+
+.fa-sun{
+    font-size: 45px;
+    color: var(--darkyellow);
+    transition: .fas 100ms linear;
+    transition: background 170ms linear;
+}
+
+.fa-moon{
+    font-size: 35px;
+    margin-top: 5px;
+    color: var(--blue);
+    transition: .fas 150ms linear;
+    transition: background 170ms linear;
+}
+
+.dark {
+    background-color: var(--dark);
+}
+
+
+
+
+/* media queries */
+@media (max-width: 1100px) {
+    .front-page{
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .lyrics{
+        width: 80%;
+    }
+}
+
+@media (max-width: 530px) {
+    .front-page{
+        top: 32%;
+    }
+    
+    .toggle{
+        right: 10%;
+    }
+}
+
+@media (max-height: 350px) {
+    .front-page{
+        top: 20%;
+    }
+    .front-page .fas{
+        margin-top: 5vh;
+    }
+}

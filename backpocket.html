@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>back pocket</title>
+        <link rel="stylesheet" href="backpocket.css">
+        <link rel="shortcut icon" href="https://styles.redditmedia.com/t5_30wlu/styles/communityIcon_0u0ivb29ul011.png">
+        
+        
+        <script src="https://kit.fontawesome.com/8a4064dcae.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <header>
+            <div class="front-page">
+                <div class="text1">
+                    <h1>and Ill</h1>
+                    <h1>put it in my pocket</h1>
+                </div>
+                <div class="text2">
+                    <h1>in my back pocket</h1>
+                </div>
+
+                <a href="#" class="down">
+                    <i class="fas fa-chevron-circle-down"></i>
+                </a>
+            </div>
+        </header>
+               
+       <div class="clr"></div>
+       
+        <section class="section">
+            
+            <!-- toggle button -->
+            <div class="toggle">
+                <i class="fas fa-sun" onclick="myFunction(this)"></i>
+            </div>
+             
+              
+            <div class="lyrics">
+               <h1>i know</h1>
+               <h1>That its taken me all this time to say girl</h1>
+               <h1>Im slow</h1>
+               <h1>So its taken me all this time to say girl</h1>
+               <h1>Tip toe</h1>
+               <h1>And I want to acknowledge my mistake girl</h1>
+               <h1>Uh oh</h1>
+               <h1>And I hope that you know its not too late</h1>
+            </div>
+        </section>
+       
+    </body>
+     
+
+    <script type='text/javascript'>
+
+    $(document).ready(function(){
+        var height = $(window).height(); 
+        // defines the height you want to scroll, in this case the height of the window
+        $('.down').click(function(){ 
+            // the selector + what happens if you click on it
+            $('html, body').animate({scrollTop: height }, 1000); //scroll for the predetermined amount
+            return false; // negates the href="#" of the link
+        });
+    });
+        
+    function myFunction(x){
+        x.classList.toggle("fa-moon")
+        x.classList.toggle("fa-sun")
+        $('section').toggleClass('dark')
+        
+    }
+    </script>
+    
+
+</html>
